@@ -978,6 +978,7 @@ export default function App() {
       </footer>
 
       {/* Mobile Sidebar Overlay */}
+{/* Mobile Sidebar Overlay */}
       <AnimatePresence>
         {isSidebarOpen && (
           <>
@@ -993,18 +994,19 @@ export default function App() {
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition={{ type: 'spring', damping: 30, stiffness: 200 }}
-              className={`fixed inset-y-0 left-0 w-80 z-50 p-8 md:hidden shadow-2xl border-r transition-colors duration-500 ${isDarkMode ? 'bg-dark-surface border-white/10' : 'bg-soda-cream border-soda-copper/30'}`}
+              {/* 👇 AQUÍ SE AGREGÓ overflow-y-auto */}
+              className={fixed inset-y-0 left-0 w-80 z-50 p-8 md:hidden shadow-2xl border-r overflow-y-auto transition-colors duration-500 ${isDarkMode ? 'bg-dark-surface border-white/10' : 'bg-soda-cream border-soda-copper/30'}}
             >
               <div className="flex items-center justify-between mb-12">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-soda-brown flex items-center justify-center">
                     <span className="text-soda-cream font-serif font-bold text-xl">;</span>
                   </div>
-                  <h2 className={`text-2xl font-serif font-bold transition-colors ${isDarkMode ? 'text-dark-text' : 'text-soda-brown'}`}>Menú</h2>
+                  <h2 className={text-2xl font-serif font-bold transition-colors ${isDarkMode ? 'text-dark-text' : 'text-soda-brown'}}>Menú</h2>
                 </div>
                 <button 
                   onClick={() => setIsSidebarOpen(false)}
-                  className={`p-2 rounded-full transition-colors ${isDarkMode ? 'hover:bg-white/10 text-dark-text' : 'hover:bg-soda-copper/10 text-soda-brown'}`}
+                  className={p-2 rounded-full transition-colors ${isDarkMode ? 'hover:bg-white/10 text-dark-text' : 'hover:bg-soda-copper/10 text-soda-brown'}}
                 >
                   <X className="w-6 h-6" />
                 </button>
@@ -1034,18 +1036,9 @@ export default function App() {
                   </button>
                 ))}
               </nav>
-
-              <div className="absolute bottom-10 left-8 right-8">
-                <div className={`p-8 rounded-[40px] border text-center transition-colors ${isDarkMode ? 'bg-white/5 border-white/10' : 'bg-white/40 border-soda-copper/20'}`}>
-                  <p className={`text-xs leading-relaxed italic font-medium transition-colors ${isDarkMode ? 'text-dark-text/40' : 'text-soda-brown/60'}`}>
-                    "Donde cada bocado cuenta una historia."
-                  </p>
-                </div>
-              </div>
+              {/* 👇 AQUÍ SE ELIMINÓ EL RECUADRO CON LA FRASE */}
             </motion.div>
           </>
         )}
       </AnimatePresence>
-    </div>
-  );
-}
+   

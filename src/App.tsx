@@ -978,7 +978,6 @@ export default function App() {
       </footer>
 
       {/* Mobile Sidebar Overlay */}
-{/* Mobile Sidebar Overlay */}
       <AnimatePresence>
         {isSidebarOpen && (
           <>
@@ -994,7 +993,6 @@ export default function App() {
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition={{ type: 'spring', damping: 30, stiffness: 200 }}
-              {/* 👇 AQUÍ SE AGREGÓ overflow-y-auto */}
               className={fixed inset-y-0 left-0 w-80 z-50 p-8 md:hidden shadow-2xl border-r overflow-y-auto transition-colors duration-500 ${isDarkMode ? 'bg-dark-surface border-white/10' : 'bg-soda-cream border-soda-copper/30'}}
             >
               <div className="flex items-center justify-between mb-12">
@@ -1036,9 +1034,7 @@ export default function App() {
                   </button>
                 ))}
               </nav>
-              {/* 👇 AQUÍ SE ELIMINÓ EL RECUADRO CON LA FRASE */}
             </motion.div>
           </>
         )}
       </AnimatePresence>
-   

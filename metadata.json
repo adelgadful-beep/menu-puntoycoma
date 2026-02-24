@@ -1,0 +1,5 @@
+{
+  "name": "Soda Punto y Coma - Menú Digital",
+  "description": "Menú digital interactivo para Soda Punto y Coma, sincronizado en tiempo real con Google Sheets.",
+  "requestFramePermissions": []
+}

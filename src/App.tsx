@@ -977,7 +977,7 @@ export default function App() {
         </div>
       </footer>
 
-     {/* Mobile Sidebar Overlay */}
+      {/* Mobile Sidebar Overlay */}
       <AnimatePresence>
         {isSidebarOpen && (
           <>
@@ -1038,3 +1038,6 @@ export default function App() {
           </>
         )}
       </AnimatePresence>
+    </div>
+  );
+}
